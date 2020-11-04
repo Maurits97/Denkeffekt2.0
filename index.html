@@ -8,24 +8,77 @@
     <meta name="description" content="Brigitte Brouwer Bijles Remedial Teaching Haarlem Overveen">
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="icon" href="img/Denkeffekt_favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/Denkeffekt_favicon.png">
 </head>
 <body> 
-    <nav>
+    <nav id="nav">
         <a href="index.html"><img src="img/DenkEffektLogo_Brigitte_Brouwer_Stark.png"/></a>
-		<p class="logonote">effectiever leren, beter preseteren</p>
+        <p class="logonote">effectiever leren, beter presteren</p>
+        <ul id="nav__list">
+			<li class="nav__list--bold" title="Home"><a href="index.html">Home</a></li>
+			<li title="Bijles"><a href="html/bijles.html">Bijles</a></li>
+			<li title="Werkwijze"><a href="html/werkwijze.html">Werkwijze</a></li>
+			<li title="Referenties"><a href="html/referenties.html">Referenties</a></li>
+			<li title="Tarieven"><a href="html/tarieven.html">Tarieven</a></li>
+			<li title="Over mij"><a href="html/overmij.html">Over mij</a></li>
+			<li title="Contact"><a href="html/contact.html">Contact</a></li>
+		</ul>
     </nav>
+
+    <header id="header">
+        <div class="header__content">
+            <div class="header__content__text">
+                <h1>Praktijk voor bijles en coaching in Overveen.</h1>
+                <p>Heeft je dochter of zoon moeite met de talen en begrijpend lezen? Neem dan contact met mij op!</p>
+                <div class="header__button"><a href="html/contact.html">
+                    <p>Contact</p></a>
+                </div>
+                <p class="corona-melding">In mijn praktijk hanteer ik door Corona <a href='https://www.lbrt.nl/sites/default/files/2020-09%20Corona%20poster%20Aangepast.jpg' target=' _blank'> de richtlijnen</a> van het RIVM.</p>
+            </div>
+            <img src="img/Denkeffekt_Bijles_Header_Image.png" class="header__image"/>
+        </div>
+    </header>
+
+    <div class="triangle--header"></div>
+
+    <main id="main">
+        <div class="main__sub">
+            <div class="main__text">
+                <h2>Bijles</h2>
+                <p>Ik richt mij met name op leerlingen in het voortgezet onderwijs. Daarnaast help ik studenten om te slagen voor hun taaltoets. Onderwerpen die aan bod komen zijn spelling, begrijpend lezen, ontleden bij Nederlands, grammatica, woordjes leren bij de moderne vreemde talen, dyslexie en studievaardigheden.</p>
+                <a href="html/bijles.html">Lees meer</a>
+            </div>
+
+            <div class="main__image image--boeken"></div>
+        </div>
+
+        <div class="main__sub">
+            <div class="main__image image--overmij"></div>
+
+            <div class="main__text">
+                <h2>Over mij</h2>
+                <p>Na de vervolgstudie Remedial Teaching VO aan de VU in Amsterdam heb ik sinds meer dan 15 jaar een succesvolle praktijk in Overveen. Ik ben lid van de landelijke beroepsvereniging Remedial Teachers.</p>
+                <a href="html/overmij.html">Lees meer</a>
+            </div>
+        </div>
+    </main>
+
+    <div class="qoute">
+        <p class="qoute__text">Hij vindt het echt heel fijn bij jou. Je hebt de juiste aanpak voor hem. 'Mam, Brigitte stimuleert mij positief. Dat helpt heel goed en daardoor wil ik ervoor werken.' </p>
+        <p class="qoute__who">Moeder van zoon 4 vwo, Coornhert Lyceum</p>
+        <a href="html/referenties.html">Meer referenties</a>
+    </div>
     
+    <div class="triangle triangle--footer"></div>
 
     <footer id='footer'>
-		<p><a href="html/contact.html">Klik voor contact</a></p>
+		<p id="footer__contact"><a href="html/contact.html">Klik voor contact</a></p>
 		<p>KvK: 76788733</p>
-		<p id='copyright'></p>
+        <p id='copyright'></p>
+        <p id="illustration-artist">Illustration by <a href="">Maria Shukshina</a> from <a href="https://icons8.com/" target="_blank">Icons8</a></p>
 	</footer>
 
     <!--scripts-->
-	<!--Vue CDN-->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
