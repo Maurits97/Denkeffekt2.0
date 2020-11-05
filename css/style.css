@@ -6,11 +6,16 @@
   font-size: 15px;
 }
 
+body {
+  width: 100%;
+}
+
 #nav {
   height: 65px;
   width: 100%;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 10px;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 10px;
+  position: relative;
 }
 
 #nav img {
@@ -39,6 +44,13 @@
   list-style: none;
   padding-top: 24px;
   padding-left: 40px;
+  visibility: visible;
+}
+
+@media only screen and (max-width: 1000px) {
+  #nav #nav__list {
+    display: none;
+  }
 }
 
 #nav #nav__list .nav__list--bold {
@@ -60,6 +72,68 @@
   color: grey;
 }
 
+#nav #nav__hamburger {
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  width: 30px;
+  color: black;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  #nav #nav__hamburger {
+    visibility: visible;
+  }
+}
+
+#nav .overlay {
+  -webkit-clip-path: circle(0%);
+          clip-path: circle(0%);
+  -webkit-transition: -webkit-clip-path .5s ease-in-out;
+  transition: -webkit-clip-path .5s ease-in-out;
+  transition: clip-path .5s ease-in-out;
+  transition: clip-path .5s ease-in-out, -webkit-clip-path .5s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #FFFEFF;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+
+#nav .overlay .overlay__exit img {
+  width: 40px;
+  position: absolute;
+  top: 2em;
+  right: 2em;
+}
+
+#nav .overlay .overlay__menu {
+  margin-top: 80px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-out, margin-top 1s ease;
+  transition: opacity .5s ease-out, margin-top 1s ease;
+}
+
+#nav .overlay .overlay__menu li {
+  margin-bottom: 20px;
+}
+
+#nav .overlay .overlay__menu a {
+  font-size: 40px;
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+}
+
+#nav .overlay .overlay__menu a:hover {
+  color: grey;
+}
+
 #header {
   min-height: 500px;
   width: 100%;
@@ -67,15 +141,20 @@
 }
 
 #header .header__content {
-  position: relative;
   width: 75%;
   margin: 0 auto;
   padding-top: 110px;
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  #header .header__content {
+    padding-top: 50px;
+  }
+}
+
 #header .header__content .header__content__text {
-  width: 470px;
+  max-width: 470px;
 }
 
 #header .header__content .header__content__text h1 {
@@ -113,11 +192,33 @@
   margin-top: 30px;
 }
 
+@media only screen and (max-width: 1200px) {
+  #header .header__content .header__content__text .corona-melding {
+    padding-bottom: 50px;
+  }
+}
+
+#header .header__content .header__content__text .corona-melding a {
+  font-size: 13px;
+}
+
 #header .header__content .header__image {
   height: 350px;
   position: absolute;
-  top: 70px;
-  right: 0;
+  top: 150px;
+  right: 150px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #header .header__content .header__image {
+    right: 0px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  #header .header__content .header__image {
+    display: none;
+  }
 }
 
 .triangle--header {
@@ -131,6 +232,12 @@
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 150px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #main {
+    width: 80%;
+  }
 }
 
 #main .header--subpage {
@@ -170,6 +277,12 @@
           justify-content: space-between;
   position: relative;
   margin-top: 70px;
+}
+
+@media only screen and (max-width: 950px) {
+  #main .main__sub {
+    margin-top: 30px;
+  }
 }
 
 #main .main__sub .main__text {
@@ -223,6 +336,12 @@
   background-size: cover;
   position: relative;
   border-radius: 3px;
+}
+
+@media only screen and (max-width: 950px) {
+  #main .main__sub .main__image {
+    display: none;
+  }
 }
 
 #main .main__sub .main__image:after {
@@ -294,7 +413,8 @@
 
 .qoute {
   display: block;
-  width: 500px;
+  max-width: 500px;
+  padding: 0 40px 0 40px;
   margin: 0 auto;
   text-align: center;
   line-height: 25px;
@@ -332,7 +452,7 @@
   font-style: italic;
   position: absolute;
   bottom: 40px;
-  right: -10px;
+  right: 10px;
   z-index: -1;
   opacity: 0.2;
 }

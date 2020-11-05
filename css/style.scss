@@ -6,11 +6,15 @@
     padding: 0;
     font-size: 15px;
 }
+body {
+    width: 100%;
+}
 
 #nav {
     height: 65px;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 10px;
+    position: relative;
 
     img {
         width: 220px;
@@ -32,6 +36,11 @@
         list-style: none;
         padding-top: 24px;
         padding-left: 40px;
+        visibility: visible;
+
+        @media only screen and (max-width: 1000px) {
+            display: none;
+          }
 
         .nav__list--bold {
             font-weight: 600;
@@ -53,6 +62,63 @@
             }
         }
     }
+
+    #nav__hamburger {
+        position: absolute;
+        top: 13px;
+        right: 20px;
+        width: 30px;
+        color: black;
+        visibility: hidden;
+        cursor: pointer;
+
+        @media only screen and (max-width: 1000px) {
+            visibility: visible;
+          }
+    }
+
+    .overlay {
+        clip-path: circle(0%);
+        transition: clip-path .5s ease-in-out;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #FFFEFF;
+        width: 100%;
+        height: 100vh;
+        z-index: 10; 
+
+        .overlay__exit {
+            img {
+                width: 40px;
+                position: absolute;
+                top: 2em;
+                right: 2em;
+            }   
+        }
+
+        .overlay__menu {
+            margin-top: 80px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .5s ease-out, margin-top 1s ease;
+
+            li {
+                margin-bottom: 20px;
+            }
+
+            a {
+                font-size: 40px;
+                font-weight: 400;
+                color: black;
+                text-decoration: none;
+                
+                &:hover {
+                    color: grey;
+                }
+            }
+        }
+    }
 }
 
 #header {
@@ -61,14 +127,17 @@
     background-color: #3080EB;
 
     .header__content {
-        position: relative;
         width: 75%;
         margin: 0 auto;
         padding-top: 110px;
         color: white;
 
+        @media only screen and (max-width: 600px) {
+            padding-top: 50px;
+          }
+
         .header__content__text {
-            width: 470px;
+            max-width: 470px;
 
             h1 {
                 font-size: 40px;
@@ -102,14 +171,30 @@
                 font-style: italic;
                 font-size: 13px;
                 margin-top: 30px;
+
+                @media only screen and (max-width: 1200px) {
+                    padding-bottom: 50px;
+                  }
+
+                a {
+                    font-size: 13px;
+                }
             }
         }
        
         .header__image {
             height: 350px;
             position: absolute;
-            top: 70px;
-            right: 0;
+            top: 150px;
+            right: 150px;
+
+            @media only screen and (max-width: 1200px) {
+                right: 0px;
+            }
+
+            @media only screen and (max-width: 950px) {
+                display: none;
+            }
         }
     }
 }
@@ -125,6 +210,10 @@
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 150px;
+
+    @media only screen and (max-width: 1200px) {
+        width: 80%;
+      }
 
     .header--subpage {
         font-weight: 500;
@@ -156,6 +245,10 @@
         justify-content: space-between;
         position: relative;
         margin-top: 70px;
+
+        @media only screen and (max-width: 950px) {
+            margin-top: 30px;
+          }
 
         .main__text {
             padding-top: 20px;
@@ -208,6 +301,10 @@
             background-size: cover;
             position: relative;
             border-radius: 3px;
+
+            @media only screen and (max-width: 950px) {
+                display: none;
+              }
 
             &:after {
                 content: '';
@@ -264,7 +361,8 @@
 
 .qoute {
     display: block;
-    width: 500px;
+    max-width: 500px;
+    padding: 0 40px 0 40px;
     margin: 0 auto;
     text-align: center;
     line-height: 25px;
@@ -301,7 +399,7 @@
         font-style: italic;
         position: absolute;
         bottom: 40px;
-        right: -10px;
+        right: 10px;
         z-index: -1;
         opacity: 0.2;
     }
