@@ -8,6 +8,7 @@
 }
 body {
     width: 100%;
+    overflow-x: hidden;
 }
 
 #nav {
@@ -41,6 +42,11 @@ body {
         @media only screen and (max-width: 1000px) {
             display: none;
           }
+        
+        // @media only screen and (min-width: 1440px) {
+        //     max-width: 1000px;
+        //     margin: 0 auto;
+        // }
 
         .nav__list--bold {
             font-weight: 600;
