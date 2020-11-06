@@ -268,14 +268,12 @@ body {
 @media only screen and (max-width: 1000px) {
   #header .header__content .header__image {
     opacity: 0.2;
-    right: 0;
   }
 }
 
-@media only screen and (min-width: 2100px) {
+@media only screen and (min-width: 1440px) {
   #header .header__content .header__image {
     height: 450px;
-    right: 0;
   }
 }
 
