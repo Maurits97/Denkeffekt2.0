@@ -140,11 +140,18 @@ body {
   background-color: #3080EB;
 }
 
+@media only screen and (min-width: 1440px) {
+  #header {
+    min-height: 700px;
+  }
+}
+
 #header .header__content {
   width: 75%;
   margin: 0 auto;
   padding-top: 110px;
   color: white;
+  position: relative;
 }
 
 @media only screen and (max-width: 600px) {
@@ -153,8 +160,21 @@ body {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  #header .header__content {
+    width: 60%;
+    padding-top: 160px;
+  }
+}
+
 #header .header__content .header__content__text {
   max-width: 470px;
+}
+
+@media only screen and (min-width: 1440px) {
+  #header .header__content .header__content__text {
+    max-width: 800px;
+  }
 }
 
 #header .header__content .header__content__text h1 {
@@ -166,6 +186,18 @@ body {
 @media only screen and (max-width: 600px) {
   #header .header__content .header__content__text h1 {
     font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #header .header__content .header__content__text h1 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #header .header__content .header__content__text p {
+    font-size: 20px;
   }
 }
 
@@ -182,6 +214,14 @@ body {
   border-radius: 3px;
   margin-top: 60px;
   position: relative;
+  z-index: 5;
+}
+
+@media only screen and (min-width: 1440px) {
+  #header .header__content .header__content__text .header__button {
+    width: 200px;
+    height: 50px;
+  }
 }
 
 #header .header__content .header__content__text .header__button p {
@@ -205,8 +245,15 @@ body {
 #header .header__content .header__image {
   height: 350px;
   position: absolute;
-  top: 150px;
-  right: 10%;
+  top: 70px;
+  right: 0;
+  z-index: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #header .header__content .header__image {
+    height: 250px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -216,9 +263,10 @@ body {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 2100px) {
   #header .header__content .header__image {
-    height: 250px;
+    height: 450px;
+    right: 0;
   }
 }
 
@@ -238,6 +286,12 @@ body {
 @media only screen and (max-width: 1000px) {
   #main {
     width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #main {
+    max-width: 1000px;
   }
 }
 
