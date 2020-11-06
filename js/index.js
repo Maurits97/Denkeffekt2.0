@@ -24,10 +24,12 @@ hamburger.addEventListener('click', function(){
     overlay.style.clipPath = 'circle(100%)';
     overlayMenu.style.opacity = 1;
     overlayMenu.style.marginTop = '100px';
+    exit.style.opacity = 1;
 })
 
 exit.addEventListener('click', function(){
     overlay.style.clipPath = 'circle(0%)';
     overlayMenu.style.opacity = 0;
     overlayMenu.style.marginTop = '80px';
+    exit.style.opacity = 0;
 })
