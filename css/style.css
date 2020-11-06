@@ -149,7 +149,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   #header .header__content {
-    padding-top: 50px;
+    padding-top: 70px;
   }
 }
 
@@ -161,6 +161,12 @@ body {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  #header .header__content .header__content__text h1 {
+    font-size: 25px;
+  }
 }
 
 #header .header__content .header__content__text a {
@@ -192,12 +198,6 @@ body {
   margin-top: 30px;
 }
 
-@media only screen and (max-width: 1200px) {
-  #header .header__content .header__content__text .corona-melding {
-    padding-bottom: 50px;
-  }
-}
-
 #header .header__content .header__content__text .corona-melding a {
   font-size: 13px;
 }
@@ -206,18 +206,19 @@ body {
   height: 350px;
   position: absolute;
   top: 150px;
-  right: 150px;
+  right: 10%;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
   #header .header__content .header__image {
-    right: 0px;
+    opacity: 0.2;
+    right: 0;
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 600px) {
   #header .header__content .header__image {
-    display: none;
+    height: 250px;
   }
 }
 
@@ -234,7 +235,7 @@ body {
   margin-bottom: 150px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
   #main {
     width: 80%;
   }
@@ -251,6 +252,8 @@ body {
   font-weight: 500;
   color: #3080EB;
   font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 #main .subheader--semisubpage {
@@ -272,6 +275,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -279,9 +285,12 @@ body {
   margin-top: 70px;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 600px) {
   #main .main__sub {
-    margin-top: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -314,6 +323,7 @@ body {
 #main .main__sub .image--boeken {
   background-image: url("../img/Brigitte_Brouwer_Stark_Boeken.jpg");
   background-position: -119px 0px;
+  margin-left: 25px;
 }
 
 #main .main__sub .image--boeken:after {
@@ -323,6 +333,7 @@ body {
 #main .main__sub .image--overmij {
   background-image: url("../img/Foto_Brigitte_Brouwer_Stark.jpg");
   background-position: -230px -51px;
+  margin-right: 25px;
 }
 
 #main .main__sub .image--overmij:after {
@@ -330,7 +341,7 @@ body {
 }
 
 #main .main__sub .main__image {
-  width: 230px;
+  min-width: 230px;
   height: 230px;
   background-color: #3080EB;
   background-size: cover;
@@ -338,9 +349,9 @@ body {
   border-radius: 3px;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 600px) {
   #main .main__sub .main__image {
-    display: none;
+    margin-top: 50px;
   }
 }
 
@@ -353,6 +364,15 @@ body {
   top: -10px;
   z-index: -1;
   border-radius: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  #main .main__sub--mobileOvermij {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 #main .main__sub--overmij {

@@ -133,7 +133,7 @@ body {
         color: white;
 
         @media only screen and (max-width: 600px) {
-            padding-top: 50px;
+            padding-top: 70px;
           }
 
         .header__content__text {
@@ -143,6 +143,10 @@ body {
                 font-size: 40px;
                 font-weight: 600;
                 margin-bottom: 25px;
+
+                @media only screen and (max-width: 600px) {
+                    font-size: 25px;
+                  }
             }
     
             a {
@@ -172,10 +176,6 @@ body {
                 font-size: 13px;
                 margin-top: 30px;
 
-                @media only screen and (max-width: 1200px) {
-                    padding-bottom: 50px;
-                  }
-
                 a {
                     font-size: 13px;
                 }
@@ -186,14 +186,15 @@ body {
             height: 350px;
             position: absolute;
             top: 150px;
-            right: 150px;
+            right: 10%;
 
-            @media only screen and (max-width: 1200px) {
-                right: 0px;
+            @media only screen and (max-width: 1000px) {
+                opacity: 0.2;
+                right: 0;
             }
 
-            @media only screen and (max-width: 950px) {
-                display: none;
+            @media only screen and (max-width: 600px) {
+                height: 250px;
             }
         }
     }
@@ -211,9 +212,9 @@ body {
     margin-top: 50px;
     margin-bottom: 150px;
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1000px) {
         width: 80%;
-      }
+    }
 
     .header--subpage {
         font-weight: 500;
@@ -226,6 +227,8 @@ body {
         font-weight: 500;
         color: #3080EB;
         font-size: 20px;
+        margin-bottom: 5px;
+        margin-top: 20px;
     }
 
     .subheader--semisubpage {
@@ -242,13 +245,14 @@ body {
     .main__sub {
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
         position: relative;
         margin-top: 70px;
 
-        @media only screen and (max-width: 950px) {
-            margin-top: 30px;
-          }
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+        }
 
         .main__text {
             padding-top: 20px;
@@ -279,6 +283,7 @@ body {
         .image--boeken {
             background-image: url('../img/Brigitte_Brouwer_Stark_Boeken.jpg');
             background-position: -119px 0px;
+            margin-left: 25px;
 
             &:after {
                 right: -10px;
@@ -288,6 +293,7 @@ body {
         .image--overmij {
             background-image: url('../img/Foto_Brigitte_Brouwer_Stark.jpg');
             background-position: -230px -51px;
+            margin-right: 25px;
 
             &:after {
                 left: -10px;
@@ -295,16 +301,16 @@ body {
         }
 
         .main__image {
-            width: 230px;
+            min-width: 230px;
             height: 230px;
             background-color: #3080EB;
             background-size: cover;
             position: relative;
             border-radius: 3px;
 
-            @media only screen and (max-width: 950px) {
-                display: none;
-              }
+            @media only screen and (max-width: 600px) {
+                margin-top: 50px;
+            }
 
             &:after {
                 content: '';
@@ -318,6 +324,13 @@ body {
             }
         }
     }
+
+    .main__sub--mobileOvermij {
+        @media only screen and (max-width: 600px) {
+            flex-direction: column-reverse;
+        }
+    }
+
     .main__sub--overmij {
         margin-top: 0px;
     }
@@ -349,6 +362,7 @@ body {
     details[open] summary ~ *{
         animation: sweep .3s ease-in-out;
     }
+    
     @keyframes sweep {
         from {
             opacity: 0; margin-top: -10px;
