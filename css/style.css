@@ -90,25 +90,17 @@ body {
 }
 
 #nav .overlay {
-  -webkit-clip-path: circle(0%);
-          clip-path: circle(0%);
-  -webkit-transition: -webkit-clip-path .5s ease-in-out;
-  transition: -webkit-clip-path .5s ease-in-out;
-  transition: clip-path .5s ease-in-out;
-  transition: clip-path .5s ease-in-out, -webkit-clip-path .5s ease-in-out;
   position: fixed;
   top: 0;
   left: 0;
   background-color: #FFFEFF;
   width: 100%;
-  height: 100vh;
+  height: 0;
   z-index: 10;
 }
 
 #nav .overlay .overlay__exit {
-  opacity: 0;
-  -webkit-transition: opacity 3s ease-out;
-  transition: opacity 3s ease-out;
+  display: none;
 }
 
 #nav .overlay .overlay__exit img {
@@ -122,8 +114,8 @@ body {
   margin-top: 80px;
   text-align: center;
   opacity: 0;
-  -webkit-transition: opacity .5s ease-out, margin-top 1s ease;
-  transition: opacity .5s ease-out, margin-top 1s ease;
+  -webkit-transition: margin-top 1s ease;
+  transition: margin-top 1s ease;
 }
 
 #nav .overlay .overlay__menu li {
