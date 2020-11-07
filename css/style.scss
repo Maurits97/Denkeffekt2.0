@@ -42,11 +42,6 @@ body {
         @media only screen and (max-width: 1000px) {
             display: none;
           }
-        
-        // @media only screen and (min-width: 1440px) {
-        //     max-width: 1000px;
-        //     margin: 0 auto;
-        // }
 
         .nav__list--bold {
             font-weight: 600;
@@ -240,6 +235,7 @@ body {
 
             @media only screen and (min-width: 1440px) {
                 height: 450px;
+                top: 90px;
             }
         }
     }
@@ -254,6 +250,7 @@ body {
 #main {
     width: 60%;
     margin: 0 auto;
+    min-height: 38vh;
     margin-top: 50px;
     margin-bottom: 150px;
 
@@ -315,6 +312,10 @@ body {
             p {
                 max-width: 500px;
                 line-height: 25px;
+
+                @media only screen and (min-width: 1440px) {
+                    max-width: 700px;
+                }
             }
 
             a {
@@ -327,6 +328,12 @@ body {
         .main__overmij {
             padding-top: 0px;
             margin-top: -10px;
+        }
+
+        .overmij__secondp--pushdown {
+            @media only screen and (min-width: 1440px) {
+                margin-top: 20px;
+            }
         }
 
         .image--boeken {
