@@ -21,15 +21,15 @@ const overlayMenu = document.querySelector('.overlay__menu');
 const exit = document.querySelector('.overlay__exit');
 
 hamburger.addEventListener('click', function(){
-    overlay.style.height = '100vh';
+    overlay.style.opacity = '1';
+    overlay.style.display = 'block';
     overlayMenu.style.opacity = 1;
-    overlayMenu.style.marginTop = '100px';
     exit.style.display = 'block';
 })
 
 exit.addEventListener('click', function(){
-    overlay.style.height = '0';
+    overlay.style.opacity = '0';
+    overlay.style.display = 'none';
     overlayMenu.style.opacity = 0;
-    overlayMenu.style.marginTop = '80px';
     exit.style.display = 'none';
 })
